@@ -13,7 +13,7 @@ import java.util.List;
  * Created by rafau on 2017-02-21.
  */
 @Controller
-public class ProductController {
+public class HomeController {
     @Autowired
     private ProductRepository productRepository;
 
@@ -22,5 +22,10 @@ public class ProductController {
         List<Product> products = productRepository.findAll();
         model.addAttribute("products",products);
         return "home";
+    }
+
+    @GetMapping("/login")
+    public String login(){
+        return "login_form";
     }
 }

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}" type="text/css"/>
     <link rel="stylesheet" href="../static/css/input.css" th:href="@{/css/input.css}" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin-ext" rel="stylesheet"/>
     <link rel="stylesheet" href="../static/fontello/css/fontello.css" type="text/css"/>
     <meta charset="UTF-8"/>
     <title>Sign Up!</title>
@@ -14,7 +14,7 @@
 
     <div class="header">
         <div class="logo">
-            <img src="../static/img/logo.png" th:src="@{/img/logo.png}" style="float: left" ;/>
+            <img src="../static/img/logo.png" th:src="@{/img/logo.png}" style="float: left"/>
             green-store
             <div style="clear:both;"></div>
         </div>
@@ -25,52 +25,53 @@
             <li><a href="#" th:href="@{/}">Home</a> </li>
             <li><a href="#" >About us</a></li>
             <li><a href="#" th:href="@{/login}">Login</a> </li>
-            <li><a href="#" th:href="@{/signup">Sign up</a> </li>
+            <li><a href="#" th:href="@{/signup}">Sign up</a> </li>
             <li><a href="#" th:href="@{/mycart}">Cart</a> </li>
         </ol>
 
     </div>
 
-    <div class="container">
-        <form action="#" method="post" th:action="@{/signup}" th:object="${client}">
-            Email(login)
-            <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
-            <input type="text" th:field="*{email}" placeholder="email"/> <br/>
+        <div class="container" >
+            <form action="#" method="post" th:action="@{/signup}" th:object="${client}">
+                Email(login)
+                <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+                <input type="text" th:field="*{email}" placeholder="email"/> <br/>
 
 
-            Password
-            <p th:if="${#fields.hasErrors('password')}" th:error="${client.password}"></p>
-            <input type="password" th:field="*{password}" placeholder="password"/><br/>
+                Password
+                <p th:if="${#fields.hasErrors('password')}" th:error="${client.password}"></p>
+                <input type="password" th:field="*{password}" placeholder="password"/><br/>
 
 
-            First name
-            <p th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></p>
-            <input type="text" th:field="*{firstName}" placeholder="first name"/> <br/>
+                First name
+                <p th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></p>
+                <input type="text" th:field="*{firstName}" placeholder="first name"/> <br/>
 
-            Last name
-            <p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></p>
-            <input type="text" th:field="*{lastName}" placeholder="last name"/> <br/>
+                Last name
+                <p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></p>
+                <input type="text" th:field="*{lastName}" placeholder="last name"/> <br/>
 
-            Phone number
-            <p th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"></p>
-            <input type="text" th:field="*{phoneNumber}" placeholder="phone number"/> <br/>
+                Phone number
+                <p th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"></p>
+                <input type="text" th:field="*{phoneNumber}" placeholder="phone number"/> <br/>
 
-            Street
-            <p th:if="${#fields.hasErrors('street')}" th:errors="*{street}"></p>
-            <input type="text" th:field="${address.street}" placeholder="street"/><br/>
-            City
-            <p th:if="${#fields.hasErrors('city')}" th:errors="*{city}"></p>
-            <input type="text" th:field="${address.city}" placeholder="city"/><br/>
-            Post code(without '-')
-            <p th:if="${#fields.hasErrors('postCode')}" th:errors="*{postCode}"></p>
-            <input type="text" th:field="${address.postCode}" placeholder="post code"/><br/>
+                Street
+                <p th:if="${#fields.hasErrors('${address.street}')}" th:errors="*{street}"></p>
+                <input type="text" th:field="${address.street}" placeholder="street"/><br/>
 
+                City
+                <p th:if="${#fields.hasErrors('${address.city}')}" th:errors="*{city}"></p>
+                <input type="text" th:field="${address.city}" placeholder="city"/><br/>
 
+                Post code(without '-')
+                <p th:if="${#fields.hasErrors('${address.postCode}')}" th:errors="*{postCode}"></p>
+                <input type="text" th:field="${address.postCode}" placeholder="post code"/><br/>
 
-            <input type="submit" value="Sign Up!"/>
+                <input type="submit" value="Sign Up!"/>
 
-        </form>
-    </div>
+            </form>
+        </div>
+
 
     <div class="socials">
         <div class="socialsdivs">

@@ -2,6 +2,7 @@ body{
     background-color: white;
     font-family: 'Lato', sans-serif;
     color: black;
+    min-height: 100%!important;
     margin: 0!important;
 }
 .wrapper{
@@ -72,6 +73,9 @@ ol > li{
 
 .socials{
     width:100%;
+    clear: both;
+    position:fixed;
+    bottom: 40px;
     margin-top: 10px;
     text-align: center;
     background-color: black;
@@ -115,6 +119,10 @@ ol > li{
 
 .footer{
     text-align: center;
+    width: 100%;
+    clear: both;
+    position:fixed;
+    bottom: 0;
     background-color: #95BE25;
     font-size: 20px;
     padding: 10px;

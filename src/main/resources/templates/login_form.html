@@ -3,7 +3,7 @@
 	<title>Please Login</title>
 	<link rel="stylesheet" href="../static/css/input.css" th:href="@{/css/input.css}" type="text/css"/>
 	<link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}" type="text/css"/>
-	<link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin-ext" rel="stylesheet"/>
 	<link rel="stylesheet" href="../static/fontello/css/fontello.css" type="text/css"/>
 </head>
 
@@ -13,7 +13,7 @@
 
 	<div class="header">
 		<div class="logo">
-			<img src="../static/img/logo.png" th:src="@{/img/logo.png}" style="float: left" ;/>
+			<img src="../static/img/logo.png" th:src="@{/img/logo.png}" style="float: left"/>
 			green-store
 			<div style="clear:both;"></div>
 		</div>
@@ -24,7 +24,7 @@
 			<li><a href="#" th:href="@{/}">Home</a> </li>
 			<li><a href="#" >About us</a></li>
 			<li><a href="#" th:href="@{/login}">Login</a> </li>
-			<li><a href="#" th:href="@{/signup">Sign up</a> </li>
+			<li><a href="#" th:href="@{/signup}">Sign up</a> </li>
 			<li><a href="#" th:href="@{/mycart}">Cart</a> </li>
 		</ol>
 	</div>
@@ -32,16 +32,16 @@
 	<div class="container">
 		<form th:action="@{/login}" method="post">
 		
-			<input type="text" name="username"placeholder="email">
+			<input type="text" name="username" placeholder="email" />
 
+			<input type="password" name="password" placeholder="password" />
 			
-			<input type="password" name="password" placeholder="password">
+			<input type="submit" value="Login" />
 
-			
-			<input type="submit" value="Login">
 		</form>
 
 	</div>
+
 
 	<div class="socials">
 		<div class="socialsdivs">
@@ -57,7 +57,6 @@
 			<div style="clear:both"></div>
 		</div>
 	</div>
-
 	<div class="footer">green-store &copy; 2017</div>
 
 </div>
