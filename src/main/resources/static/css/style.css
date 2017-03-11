@@ -1,0 +1,126 @@
+body{
+    background-color: white;
+    font-family: 'Lato', sans-serif;
+    color: black;
+    margin: 0!important;
+}
+.wrapper{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header{
+    width: 100%;
+    padding: 40px 0;
+    background-color: black;
+}
+
+.logo{
+    width: 300px;
+    font-size: 40px;
+    color: #95BE25;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 80px;
+}
+
+.navi{
+    width: 100%;
+    background-color: black;
+    padding: 10px 0;
+    color: #666666;
+    text-align: center;
+}
+
+ol{
+    padding:0;
+    margin:0;
+
+    list-style-type: none;
+    font-size: 18px;
+    height: 35px;
+    line-height: 200%;
+    display: inline-block;
+}
+
+ol a{
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+ol a:hover{
+    color: #95BE46;
+}
+
+ol > li{
+     float: left;
+     width: 150px;
+     height: 40px;
+ }
+
+.content{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+}
+
+.content h1{color:#95BE25}
+
+.socials{
+    width:100%;
+    margin-top: 10px;
+    text-align: center;
+    background-color: black;
+}
+
+.socialsdivs{
+    width: 600px;
+    color: white;
+    font-size: 50px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.fb{
+    width:200px;
+    height:60px;
+    float: left;
+}
+
+.fb:hover{
+    background-color:#4668b3;
+}
+.ig{
+    width:200px;
+    height:60px;
+    float:left;
+}
+
+.ig:hover{
+    background-color: #37b50b;
+}
+.tw{
+    width:200px;
+    height:60px;
+    float:left;
+}
+
+.tw:hover{
+    background-color:#3095d3;
+}
+
+.footer{
+    text-align: center;
+    background-color: #95BE25;
+    font-size: 20px;
+    padding: 10px;
+}
+
+
+
+
+

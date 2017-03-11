@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="../static/fontello/css/fontello.css" type="text/css"/>
+    <title>Cart</title>
+</head>
+<body>
+<div class="wrapper">
+
+    <div class="header">
+        <div class="logo">
+            <img src="../static/img/logo.png" th:src="@{/img/logo.png}" style="float: left" ;/>
+            green-store
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+
+    <div class="navi">
+        <ol>
+            <li><a href="#" th:href="@{/}">Home</a> </li>
+            <li><a href="#" >About us</a></li>
+            <li><a href="#" th:href="@{/login}">Login</a> </li>
+            <li><a href="#" th:href="@{/signup">Sign up</a> </li>
+            <li><a href="#" th:href="@{/mycart}">Cart</a> </li>
+        </ol>
+
+    </div>
+
+    <div class="content">
+
+        <h1>Products in your cart</h1>
+        <table align="center">
+            <tr th:each="product : ${cart.getProducts()}" th:object="${product}">
+                <td th:text="*{name}">name</td>
+                <td th:text="*{price}">price</td>
+                <td>
+                    <a href="#" th:href="@{/remove/{id}(id=*{id})}"><span>remove</span></a>
+                </td>
+            </tr>
+        </table>
+
+        <p th:text="${cart.countCost()}">100PLN</p>
+
+        <a href="#" th:href="@{/my/orderDetails}">Continue</a>
+    </div>
+    <div class="socials">
+        <div class="socialsdivs">
+            <div class="fb">
+                <i class="icon-facebook"></i>
+            </div>
+            <div class="ig">
+                <i class="icon-instagram"></i>
+            </div>
+            <div class="tw">
+                <i class="icon-twitter-1"></i>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+
+    <div class="footer">green-store &copy; 2017</div>
+
+
+
+</div>
+</body>
+</html>
